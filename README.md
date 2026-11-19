@@ -1,7 +1,7 @@
 # Análise de Indicadores Operacionais e Manutenção (SQL & BI)
 
 Projeto demonstrativo focado em **Engenharia de Produção, Confiabilidade Operacional e Análise de Dados**, estruturando consultas SQL para monitoramento de paradas de máquina (*downtime*), cálculo de **MTTR** e acompanhamento de planos de ação **5W2H**.
-
+> 🌐 *English version available below:* [Jump to English Version](#english-version)
 ---
 
 ## 🎯 Contexto e Problema
