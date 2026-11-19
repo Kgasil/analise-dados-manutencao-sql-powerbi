@@ -16,6 +16,7 @@ O script `analise_manutencao.sql` modela uma base relacional de ativos e ordens 
 * **Cálculo de MTTR (*Mean Time To Repair*):** Tempo médio de reparo em intervenções corretivas para avaliar agilidade de atendimento.
 * **Mix de Manutenção:** Comparativo percentual entre intervenções preventivas, preditivas e corretivas.
 * **Rastreabilidade de Causa Raiz (5W2H):** Extração direta das principais causas de falha vinculadas às ações corretivas propostas.
+* **Limpeza e Cruzamento de Dados (`limpeza_e_cruzamento.py`):** Higieniza textos e códigos de ativos, remove duplicidades e registros inválidos, cruza ordens de manutenção com o cadastro de ativos e consolida horas paradas e custos.
 
 ## 🛠️ Tecnologias Utilizadas
 
