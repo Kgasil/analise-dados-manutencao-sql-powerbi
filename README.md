@@ -25,28 +25,38 @@ O script `analise_manutencao.sql` modela uma base relacional de ativos e ordens 
 * **Integração BI:** Estrutura pronta para conexão via Power BI / Power Query
 ---
 
+## Reprodução e escopo
+
+Execute `analise_manutencao.sql` em uma base de teste vazia (SQLite moderno ou banco compatível, adaptando o dialeto se necessário). Execute `python limpeza_e_cruzamento.py` com Python 3.9+ para visualizar os dados fictícios embutidos. O Python usa somente a biblioteca padrão e uma amostra diferente da base SQL. O MTTR é estimado pelas horas de parada corretiva. Não há arquivo PBIX nem cálculo de MTBF no repositório.
+
+---
+
 <a id="english-version"></a>
 
 # Operational & Maintenance KPI Analysis (SQL & BI)
 
-Demonstrative project focused on **Industrial Engineering**, **Operational Reliability**, and **Data Analysis**, structuring SQL queries for machine downtime monitoring, **MTTR** calculation, and **5W2H** action plan tracking[cite: 7].
+Demonstrative project focused on **Industrial Engineering**, **Operational Reliability**, and **Data Analysis**, structuring SQL queries for machine downtime monitoring, **MTTR** calculation, and **5W2H** action plan tracking.
 
 ## 🎯 Context & Problem
 
-Without structured work order logging and failure history, operational teams tend to act reactively, making it harder to identify bottleneck assets and prioritize preventive maintenance[cite: 7].
+Without structured work order logging and failure history, operational teams tend to act reactively, making it harder to identify bottleneck assets and prioritize preventive maintenance.
 
 ## 🚀 Implemented Solution
 
-The `analise_manutencao.sql` script models a relational database for assets and maintenance work orders and provides analytical queries ready for **Power BI** or **Excel**[cite: 7]:
+The `analise_manutencao.sql` script models a relational database for assets and maintenance work orders and provides analytical queries ready for **Power BI** or **Excel**:
 
-* **Downtime & Cost Analysis:** Consolidates downtime hours and spare parts costs by asset and production line[cite: 7].
-* **MTTR Calculation (*Mean Time To Repair*):** Measures average repair time in corrective interventions to evaluate response speed[cite: 7].
-* **Maintenance Mix:** Compares percentages across preventive, predictive, and corrective maintenance[cite: 7].
-* **Root Cause Traceability (5W2H):** Extracts key failure causes linked to proposed corrective actions[cite: 7].
-* **Data Cleaning & Joining (`limpeza_e_cruzamento.py`):** Sanitizes text and asset codes, removes duplicates and invalid records, joins work orders with asset master data, and summarizes downtime and costs[cite: 7].
+* **Downtime & Cost Analysis:** Consolidates downtime hours and spare parts costs by asset and production line.
+* **MTTR Calculation (*Mean Time To Repair*):** Measures average repair time in corrective interventions to evaluate response speed.
+* **Maintenance Mix:** Compares percentages across preventive, predictive, and corrective maintenance.
+* **Root Cause Traceability (5W2H):** Extracts key failure causes linked to proposed corrective actions.
+* **Data Cleaning & Joining (`limpeza_e_cruzamento.py`):** Sanitizes text and asset codes, removes duplicates and invalid records, joins work orders with asset master data, and summarizes downtime and costs.
 
 ## 🛠️ Technologies Used
 
-* **SQL (DDL, DML, `JOIN`, `GROUP BY`, Window Functions `OVER()`)**[cite: 7]
-* **Industrial & Quality Metrics:** MTTR, Downtime, Preventive/Predictive Maintenance, 5W2H[cite: 7]
-* **BI Integration:** Ready for **Power BI / Power Query** consumption[cite: 7]
+* **SQL (DDL, DML, `JOIN`, `GROUP BY`, Window Functions `OVER()`)**
+* **Industrial & Quality Metrics:** MTTR, Downtime, Preventive/Predictive Maintenance, 5W2H
+* **BI Integration:** Ready for **Power BI / Power Query** consumption
+
+## Reproduction and scope
+
+Run the SQL file on a fresh test database (modern SQLite or a compatible engine). Run `python limpeza_e_cruzamento.py` with Python 3.9+ for a separate embedded synthetic dataset. No external Python libraries are needed. MTTR is estimated from corrective downtime; no PBIX dashboard or MTBF calculation is included.
