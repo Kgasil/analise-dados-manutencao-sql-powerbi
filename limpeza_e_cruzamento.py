@@ -1,5 +1,6 @@
 import csv
 import io
+import math
 import re
 
 # Base 1: simula ordens de serviço brutas com ruídos (espaços, duplicatas e valores inválidos)
@@ -43,7 +44,7 @@ def limpar_ordens(texto_csv: str) -> list[dict]:
             # Ignora linhas com valores ausentes ou inválidos
             continue
 
-        if not cod or horas < 0 or custo < 0:
+        if not cod or not math.isfinite(horas) or not math.isfinite(custo) or horas < 0 or custo < 0:
             continue
 
         chave_duplicidade = (cod, tipo, horas, custo)
