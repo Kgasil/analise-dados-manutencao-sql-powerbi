@@ -60,3 +60,15 @@ The `analise_manutencao.sql` script models a relational database for assets and 
 ## Reproduction and scope
 
 Run the SQL file on a fresh test database (modern SQLite or a compatible engine). Run `python limpeza_e_cruzamento.py` with Python 3.9+ for a separate embedded synthetic dataset. No external Python libraries are needed. MTTR is estimated from corrective downtime; no PBIX dashboard or MTBF calculation is included.
+
+---
+
+## Testes automatizados / Automated tests
+
+Execute na pasta do projeto / Run from the repository folder:
+
+```bash
+python -m unittest -v test_limpeza
+```
+
+Os testes verificam a limpeza dos dados fictícios, deduplicação, totais e valores inválidos. / Tests cover synthetic data cleansing, deduplication, totals and invalid values.
