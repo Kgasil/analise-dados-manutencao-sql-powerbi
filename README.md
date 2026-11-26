@@ -1,5 +1,10 @@
 # Análise de Indicadores Operacionais e Manutenção (SQL & BI)
 
+<!-- kg-personal-portfolio-v1 -->
+
+[KG Professional Portfolio 1.0 — Portfólio pessoal / Personal portfolio](https://kgasil.github.io/portfolio/) · [Estudo de caso / Case study](https://kgasil.github.io/portfolio/cases.html#maintenance) · [Demonstração ilustrativa / Illustrative demo](https://kgasil.github.io/portfolio/lab.html#dashboard)
+
+
 Projeto demonstrativo focado em **Engenharia de Produção, Confiabilidade Operacional e Análise de Dados**, estruturando consultas SQL para monitoramento de paradas de máquina (*downtime*), cálculo de **MTTR** e acompanhamento de planos de ação **5W2H**.
 > 🌐 *English version available below:* [Jump to English Version](#english-version)
 ---
